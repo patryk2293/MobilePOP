@@ -1,11 +1,10 @@
 package pages;
 
-import helpers.Methods;
+import helpers.SeleneiumMethods;
 import locators.FastSearchLocators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FastSearchPage {
@@ -24,18 +23,18 @@ public class FastSearchPage {
 
     public void selectMark(String mark) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(fastSearchLocators.getMark()));
-        Methods.selectElementFromDropDown(fastSearchLocators.getMark(),mark);
+        SeleneiumMethods.selectElementFromDropDown(fastSearchLocators.getMark(),mark);
         Thread.sleep(6000);
     }
 
     public void selectModel(String model){
         wait.until(ExpectedConditions.visibilityOf(fastSearchLocators.getModel()));
-        Methods.selectElementFromDropDown(fastSearchLocators.getModel(),model);
+        SeleneiumMethods.selectElementFromDropDown(fastSearchLocators.getModel(),model);
     }
 
     public void selectKilometer(String kilometer){
         wait.until(ExpectedConditions.visibilityOf(fastSearchLocators.getKilometer()));
-        Methods.selectElementFromDropDown(fastSearchLocators.getKilometer(),kilometer);
+        SeleneiumMethods.selectElementFromDropDown(fastSearchLocators.getKilometer(),kilometer);
     }
 
     public void selectCity(String city){
@@ -45,11 +44,11 @@ public class FastSearchPage {
 
     public void search(){
         wait.until(ExpectedConditions.visibilityOf(fastSearchLocators.getSearchButton()));
-        Methods.clickOnButton(fastSearchLocators.getSearchButton());
+        SeleneiumMethods.clickOnButton(fastSearchLocators.getSearchButton());
     }
     public void cookieClose(){
         wait.until(ExpectedConditions.visibilityOf(fastSearchLocators.getCookie()));
-        Methods.clickOnButton(fastSearchLocators.getCookie());
+        SeleneiumMethods.clickOnButton(fastSearchLocators.getCookie());
     }
 
 }

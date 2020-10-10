@@ -1,3 +1,4 @@
+import helpers.FileHelper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -6,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.FastSearchPage;
 import pages.MarketDetailsPage;
+
+import java.io.FileWriter;
 
 public class Tests {
 
@@ -16,10 +19,12 @@ public class Tests {
         driver = new ChromeDriver();
         driver.navigate().to("https://www.mobile.de/");
         driver.manage().window().maximize();
+        FileHelper.createFile();
 
     }
 
     @Test
+
     public void mobileSearch() throws InterruptedException {
 
         FastSearchPage fastSearchPage = new FastSearchPage(driver);
@@ -43,10 +48,13 @@ public class Tests {
         marketDetailsPage.selectMark("Audi");
         marketDetailsPage.selectModel("A4");
         marketDetailsPage.verifyTitle("Audi A4 (Serie)");
+        FileHelper.saveToFile("Test");
     }
 
     @After
     public void tearDown(){
+        FileHelper.closeWriter();
         driver.quit();
+
     }
 }

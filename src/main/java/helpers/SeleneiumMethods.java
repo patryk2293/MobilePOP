@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class Methods {
+public class SeleneiumMethods {
 
     public static void selectElementFromDropDown (WebElement locator, String expectedtext){
         new Select(locator).selectByVisibleText(expectedtext);

@@ -1,12 +1,11 @@
 package pages;
 
-import helpers.Methods;
+import helpers.SeleneiumMethods;
 import locators.MarkDetailsLocators;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MarketDetailsPage {
@@ -24,23 +23,23 @@ public class MarketDetailsPage {
 
     public void clickDropdownInformation(){
         wait.until(ExpectedConditions.elementToBeClickable(markDetailsLocators.getInformationList()));
-        Methods.clickOnButton(markDetailsLocators.getInformationList());
+        SeleneiumMethods.clickOnButton(markDetailsLocators.getInformationList());
 
     }
 
     public void clickMarketDetails(){
         wait.until(ExpectedConditions.elementToBeClickable(markDetailsLocators.getMarketDetail()));
-        Methods.clickOnButton(markDetailsLocators.getMarketDetail());
+        SeleneiumMethods.clickOnButton(markDetailsLocators.getMarketDetail());
     }
 
     public void selectMark(String mark){
         wait.until(ExpectedConditions.visibilityOfAllElements(markDetailsLocators.getMarkList()));
-        Methods.selectFromList(markDetailsLocators.getMarkList(),mark);
+        SeleneiumMethods.selectFromList(markDetailsLocators.getMarkList(),mark);
     }
 
     public void selectModel(String model){
         wait.until(ExpectedConditions.visibilityOfAllElements(markDetailsLocators.getModelList()));
-        Methods.selectFromList(markDetailsLocators.getModelList(),model);
+        SeleneiumMethods.selectFromList(markDetailsLocators.getModelList(),model);
     }
 
     public void verifyTitle(String titleExpected){
