@@ -2,11 +2,10 @@ package locators;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import sun.awt.windows.WBufferStrategy;
 
 public class FastSearchLocators {
 
-    @FindBy(id="qsmakeBuy")
+    @FindBy(id = "qsmakeBuy")
     private WebElement mark;
 
     public WebElement getMark() {
@@ -17,7 +16,7 @@ public class FastSearchLocators {
         this.mark = mark;
     }
 
-    @FindBy(id="qsmodelBuy")
+    @FindBy(id = "qsmodelBuy")
     private WebElement model;
 
     public WebElement getModel() {
@@ -28,7 +27,7 @@ public class FastSearchLocators {
         this.model = model;
     }
 
-    @FindBy(css="#qsmilwrp .form-control.form-control--combobox")
+    @FindBy(css = "#qsmilwrp .form-control.form-control--combobox")
     private WebElement kilometer;
 
     public WebElement getKilometer() {
@@ -39,7 +38,7 @@ public class FastSearchLocators {
         this.kilometer = kilometer;
     }
 
-    @FindBy(id="ambit-search-location")
+    @FindBy(id = "ambit-search-location")
     private WebElement city;
 
     public WebElement getCity() {
@@ -50,7 +49,7 @@ public class FastSearchLocators {
         this.city = city;
     }
 
-    @FindBy(id="qssub")
+    @FindBy(id = "qssub")
     private WebElement searchButton;
 
     public WebElement getSearchButton() {
@@ -61,7 +60,7 @@ public class FastSearchLocators {
         this.searchButton = searchButton;
     }
 
-    @FindBy(id="gdpr-consent-accept-button")
+    @FindBy(id = "gdpr-consent-accept-button")
     private WebElement cookie;
 
     public WebElement getCookie() {
